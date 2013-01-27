@@ -1,0 +1,17 @@
+========================================
+Google AdMob Ads SDK for Windows Phone 7
+========================================
+
+This is the Google AdMob Ad SDK for Windows Phone 7.
+
+The SDK provides:
+- AdView, suitable for showing banner ads in many different sizes.
+
+Requirements:
+- A Google AdSense or AdMob account ID.
+- Visual Studio
+- Windows Phone Developer Tools
+
+You can also find the latest, detailed information about the SDK as well as
+download examples using the SDK at:
+http://code.google.com/mobile/ads/docs/wp7
