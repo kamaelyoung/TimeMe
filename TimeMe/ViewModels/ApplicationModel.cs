@@ -42,7 +42,7 @@ namespace TimeMe.ViewModels
         {
             get
             {
-                return string.Format("{0:00}:{1:00}.{2:0}", Duration.Minutes, Duration.Seconds, Duration.Milliseconds / 100);
+                return string.Format("{0:00}:{1:00}.{2:0}", (int)Duration.TotalMinutes, Duration.Seconds, Duration.Milliseconds / 100);
             }
         }
 
@@ -92,9 +92,22 @@ namespace TimeMe.ViewModels
             ApplicationState = ApplicationStateType.Ready;
         }
 
+        public delegate void MaxTimeReachedHandler();
+        public event MaxTimeReachedHandler MaxTimeReached;
+
         public void IncrementDuration(TimeSpan elapsedTime)
         {
-            Duration = Duration.Add(elapsedTime);
+            var newDuration = Duration.Add(elapsedTime);
+            if ((int)newDuration.TotalMinutes > 99)
+            {
+                Duration = new TimeSpan(0,0,99,59,900);
+                if (MaxTimeReached != null)
+                    MaxTimeReached();
+            }
+            else
+            {
+                Duration = newDuration;
+            }
         }
 
         public LapTimeModel RecordLapTime()

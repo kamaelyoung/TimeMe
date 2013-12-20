@@ -54,14 +54,14 @@ namespace TimeMe
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
             App.ApplicationModel.Initialize();
-            App.ApplicationModel.ResumeRun();
+            // App.ApplicationModel.ResumeRun();
         }
 
         // Code to execute when the application is deactivated (sent to background)
         // This code will not execute when the application is closing
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
-            App.ApplicationModel.HibernateRun();
+            // App.ApplicationModel.HibernateRun();
         }
 
         // Code to execute when the application is closing (eg, user hit Back)

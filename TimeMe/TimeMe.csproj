@@ -48,7 +48,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Google.AdMob.Ads.WindowsPhone7, Version=4.0.1.27070, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls" />
     <Reference Include="Microsoft.Phone.Interop" />
@@ -83,20 +82,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Content Include="packages\GoogleAdMobAdsSDKWindowsPhone7-4.0.4\sdk\Google.AdMob.Ads.WindowsPhone7.dll" />
-    <Content Include="packages\GoogleAdMobAdsSDKWindowsPhone7-4.0.4\sdk\Google.AdMob.Ads.WindowsPhone7.xml" />
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Content Include="Images\ayls.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages\GoogleAdMobAdsSDKWindowsPhone7-4.0.4\CHANGELOG" />
-    <None Include="packages\GoogleAdMobAdsSDKWindowsPhone7-4.0.4\LICENSE" />
-    <None Include="packages\GoogleAdMobAdsSDKWindowsPhone7-4.0.4\README" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>

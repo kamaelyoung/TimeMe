@@ -2,7 +2,6 @@
 using System.Windows;
 using TimeMe.ViewModels;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Tasks;
 
 namespace TimeMe
 {
@@ -23,6 +22,9 @@ namespace TimeMe
 
             App.ApplicationModel.TimerServiceTimeChanged -= TimerChanged;
             App.ApplicationModel.TimerServiceTimeChanged += TimerChanged;
+
+            App.ApplicationModel.MaxTimeReached -= MaxTimeReached;
+            App.ApplicationModel.MaxTimeReached += MaxTimeReached;
 
             SetStartStopResetButtonText();
         }
@@ -80,12 +82,13 @@ namespace TimeMe
                 });
         }
 
-        private void EatMyDustLink_Click(object sender, RoutedEventArgs e)
+        private void MaxTimeReached()
         {
-            var detailTask = new MarketplaceDetailTask();
-            detailTask.ContentIdentifier = "5640834d-cff9-df11-9264-00237de2db9e";
-            detailTask.ContentType = MarketplaceContentType.Applications;
-            detailTask.Show();
+            var newLap = App.ApplicationModel.StopRun();
+            lapsListBox.UpdateLayout();
+            lapsListBox.ScrollIntoView(newLap);
+
+            SetStartStopResetButtonText();
         }
     }
 }

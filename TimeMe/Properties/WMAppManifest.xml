@@ -1,13 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{B24D7430-FC47-4789-ADA0-AD10DF0CECE2}" Title="Time Me" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="TimeMe author" Description="Sample description" Publisher="TimeMe">
+  <App xmlns="" ProductID="{B24D7430-FC47-4789-ADA0-AD10DF0CECE2}" Title="Time Me" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Ayls Creations" Description="A simple timer app" Publisher="TimeMe">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
-      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
-      <Capability Name="ID_CAP_IDENTITY_USER" />
-      <Capability Name="ID_CAP_NETWORKING" />
-      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
-      <Capability Name="ID_CAP_PHONEDIALER" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />

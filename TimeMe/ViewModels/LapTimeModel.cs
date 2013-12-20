@@ -17,10 +17,11 @@ namespace TimeMe.ViewModels
                     lapNoFormatted = LapNo.ToString().PadLeft(3);
                 else
                     lapNoFormatted = LapNo.ToString();
-                return string.Format("{0}: {1:00}:{2:00}.{3:0} (total {4:00}:{5:00}.{6:0})", 
-                    lapNoFormatted, 
-                    LapTime.Minutes, LapTime.Seconds, LapTime.Milliseconds / 100,
-                    TimeStamp.Minutes, TimeStamp.Seconds, TimeStamp.Milliseconds / 100);
+
+                return string.Format("{0}: {1:00}:{2:00}.{3:0} (total {4:00}:{5:00}.{6:0})",
+                                     lapNoFormatted,
+                                     (int)LapTime.TotalMinutes, LapTime.Seconds, LapTime.Milliseconds/100,
+                                     (int)TimeStamp.TotalMinutes, TimeStamp.Seconds, TimeStamp.Milliseconds / 100);
             }
         }
 
